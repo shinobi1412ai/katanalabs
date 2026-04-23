@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-const INTERESTS = ["Webdesign", "KI-Stimme", "KI Automation", "WordPress", "CRM", "Branding"];
+const INTERESTS = ["Website", "CRM", "KI-Stimme", "Chatbot", "SaaS", "Apps", "3D Character", "Animation", "Marketing-Content", "Cinematic-Trailer", "Andere"];
 
 export default function Contact() {
   const [selected, setSelected] = useState(new Set());
@@ -54,6 +54,21 @@ export default function Contact() {
           </div>
 
           <form className="form-card" onSubmit={submit}>
+            <div className="form-field">
+              <label>Was interessiert dich? <span style={{opacity:.6,fontWeight:400}}>(Mehrfachauswahl möglich)</span></label>
+              <div className="pill-row">
+                {INTERESTS.map((label) => (
+                  <button
+                    key={label}
+                    type="button"
+                    className={`pill${selected.has(label) ? " active" : ""}`}
+                    onClick={() => togglePill(label)}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </div>
             <div className="form-row">
               <div className="form-field">
                 <label>Vorname</label>
@@ -71,21 +86,6 @@ export default function Contact() {
             <div className="form-field">
               <label>Unternehmen</label>
               <input type="text" placeholder="Acme Inc." value={form.firma} onChange={update("firma")} />
-            </div>
-            <div className="form-field">
-              <label>Was brauchst du?</label>
-              <div className="pill-row">
-                {INTERESTS.map((label) => (
-                  <button
-                    key={label}
-                    type="button"
-                    className={`pill${selected.has(label) ? " active" : ""}`}
-                    onClick={() => togglePill(label)}
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
             </div>
             <div className="form-field">
               <label>Erzähl uns mehr</label>

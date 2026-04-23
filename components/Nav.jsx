@@ -16,7 +16,7 @@ export default function Nav() {
       <nav className="nav">
         <Link href="/" className="logo">
           <span className="logo-mark">武</span>
-          VISIBITLY
+          KATANA<span style={{color:"var(--red)"}}>·</span>LABS
         </Link>
 
         <div className="nav-links">

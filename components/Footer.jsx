@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="footer-brand">
             <div className="logo">
               <span className="logo-mark">武</span>
-              VISIBITLY
+              KATANA<span style={{color:"var(--red)"}}>·</span>LABS
             </div>
             <p>
               Wir bauen digitale Erlebnisse, die Marken voranbringen — von der Idee bis zum Live-Launch
@@ -29,17 +29,13 @@ export default function Footer() {
           <div className="footer-col">
             <h4>STUDIO</h4>
             <Link href="#philosophy">Über uns</Link>
-            <Link href="#testimonials">Team</Link>
-            <Link href="#contact">Karriere</Link>
-            <Link href="#contact">Presse</Link>
+            <Link href="#contact">Kontakt</Link>
           </div>
 
           <div className="footer-col">
             <h4>RESSOURCEN</h4>
-            <Link href="#contact">Blog</Link>
             <Link href="#work">Fallstudien</Link>
-            <Link href="#contact">Newsletter</Link>
-            <Link href="#contact">FAQ</Link>
+            <Link href="#features">FAQ</Link>
           </div>
 
           <div className="footer-col">
@@ -52,7 +48,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <div>© 2026 VISIBITLY GmbH · 武士道 · Gemacht mit Disziplin in Berlin</div>
+          <div>© 2026 Katana Labs · Powered by ChainVision Games FZCO</div>
           <div className="socials">
             <a href="#" aria-label="Instagram">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
