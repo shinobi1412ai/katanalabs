@@ -47,32 +47,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="contact-label">E-MAIL · 電郵</div>
-                  <div className="contact-val">hallo@visibitly.de</div>
-                </div>
-              </div>
-
-              <div className="contact-item">
-                <div className="contact-ic">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12.57a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-                  </svg>
-                </div>
-                <div>
-                  <div className="contact-label">PHONE · 電話</div>
-                  <div className="contact-val">+49 30 9876 5432</div>
-                </div>
-              </div>
-
-              <div className="contact-item">
-                <div className="contact-ic">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
-                  </svg>
-                </div>
-                <div>
-                  <div className="contact-label">STUDIO · 道場</div>
-                  <div className="contact-val">Friedrichstraße 121, 10117 Berlin</div>
+                  <div className="contact-val">info@katanalabs.de</div>
                 </div>
               </div>
             </div>
