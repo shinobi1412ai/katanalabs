@@ -35,7 +35,6 @@ export default function Footer() {
           <div className="footer-col">
             <h4>RESSOURCEN</h4>
             <Link href="#work">Fallstudien</Link>
-            <Link href="#features">FAQ</Link>
           </div>
 
           <div className="footer-col">
