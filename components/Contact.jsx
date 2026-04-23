@@ -1,12 +1,7 @@
 "use client";
 import { useState } from "react";
-import DropReveal from "./DropReveal";
-import FadeUp from "./FadeUp";
 
-const INTERESTS = [
-  "Website", "CRM", "KI-Stimme", "Chatbot", "SaaS", "Apps",
-  "3D Character", "Animation", "Marketing-Content", "Cinematic-Trailer", "Andere",
-];
+const INTERESTS = ["Webdesign", "KI-Stimme", "KI Automation", "WordPress", "CRM", "Branding"];
 
 export default function Contact() {
   const [selected, setSelected] = useState(new Set());
@@ -28,53 +23,62 @@ export default function Contact() {
   };
 
   return (
-    <section className="contact-bg" id="contact">
-      <div className="contact-grid">
-        <div className="contact-info">
-          <FadeUp><div className="section-eyebrow">連 · KONTAKT</div></FadeUp>
-          <DropReveal text="Erzähl uns von" as="h3" stagger={0.06} />
-          <h3 style={{ marginTop: 0 }}>
-            <span className="red">
-              <DropReveal text="deinem Vorhaben." as="span" delay={0.25} stagger={0.06} />
-            </span>
-          </h3>
-          <FadeUp delay={0.4}>
-            <p>Egal ob du nur eine Frage hast oder direkt loslegen willst — wir antworten innerhalb eines Werktags. Garantiert.</p>
-          </FadeUp>
-          <FadeUp delay={0.5}>
-            <div className="contact-item">
-              <div className="contact-ic">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
+    <div className="contact-bg reveal" id="contact">
+      <div className="contact-inner">
+        <div className="contact-grid">
+          <div className="contact-info">
+            <div className="section-eyebrow">連 · KONTAKT</div>
+            <h3>
+              Erzähl uns von <br/>
+              <span className="red">deinem Vorhaben.</span>
+            </h3>
+            <p>
+              Egal ob du nur eine Frage hast oder direkt loslegen willst — wir antworten innerhalb eines
+              Werktags. Garantiert.
+            </p>
+
+            <div className="contact-list">
+              <div className="contact-item">
+                <div className="contact-ic">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div>
+                  <div className="contact-label">E-MAIL · 電郵</div>
+                  <div className="contact-val">hallo@visibitly.de</div>
+                </div>
               </div>
-              <div>
-                <div className="contact-label">E-MAIL · 電郵</div>
-                <div className="contact-val">info@katanalabs.de</div>
+
+              <div className="contact-item">
+                <div className="contact-ic">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12.57a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div className="contact-label">PHONE · 電話</div>
+                  <div className="contact-val">+49 30 9876 5432</div>
+                </div>
+              </div>
+
+              <div className="contact-item">
+                <div className="contact-ic">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div>
+                  <div className="contact-label">STUDIO · 道場</div>
+                  <div className="contact-val">Friedrichstraße 121, 10117 Berlin</div>
+                </div>
               </div>
             </div>
-          </FadeUp>
-        </div>
+          </div>
 
-        <FadeUp delay={0.2} y={60}>
           <form className="form-card" onSubmit={submit}>
-            <div className="form-field">
-              <label>Was interessiert dich? <span style={{ opacity: 0.6, fontWeight: 400 }}>(Mehrfachauswahl möglich)</span></label>
-              <div className="pill-row">
-                {INTERESTS.map((label) => (
-                  <button
-                    key={label}
-                    type="button"
-                    className={`pill${selected.has(label) ? " active" : ""}`}
-                    onClick={() => togglePill(label)}
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
             <div className="form-row">
               <div className="form-field">
                 <label>Vorname</label>
@@ -94,16 +98,44 @@ export default function Contact() {
               <input type="text" placeholder="Acme Inc." value={form.firma} onChange={update("firma")} />
             </div>
             <div className="form-field">
-              <label>Erzähl uns mehr</label>
-              <textarea placeholder="Worum geht's? Welches Problem soll gelöst werden?" value={form.msg} onChange={update("msg")} />
+              <label>Was brauchst du?</label>
+              <div className="pill-row">
+                {INTERESTS.map((label) => (
+                  <button
+                    key={label}
+                    type="button"
+                    className={`pill${selected.has(label) ? " active" : ""}`}
+                    onClick={() => togglePill(label)}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
             </div>
-
-            <button type="submit" className="btn-primary" style={{ width: "100%", justifyContent: "center" }}>
-              ANFRAGE SENDEN →
-            </button>
+            <div className="form-field">
+              <label>Erzähl uns mehr</label>
+              <textarea
+                placeholder="Worum geht's? Welches Problem soll gelöst werden?"
+                value={form.msg}
+                onChange={update("msg")}
+              />
+            </div>
+            <div className="form-submit-wrap">
+              <button type="submit" className="brush-btn">
+                <svg className="brush-bg" viewBox="0 0 320 120" preserveAspectRatio="none">
+                  <path
+                    d="M 12,40 C 28,18 60,12 100,18 C 145,24 180,8 220,14 C 260,20 295,18 312,32 C 318,52 305,72 285,88 C 245,104 200,108 150,102 C 95,96 50,108 22,98 C 4,84 2,62 12,40 Z"
+                    fill="#ed1c24"
+                  />
+                  <circle cx="14" cy="60" r="3" fill="#ed1c24"/>
+                  <circle cx="306" cy="76" r="2.5" fill="#ed1c24"/>
+                </svg>
+                <span>ANFRAGE SENDEN</span>
+              </button>
+            </div>
           </form>
-        </FadeUp>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
