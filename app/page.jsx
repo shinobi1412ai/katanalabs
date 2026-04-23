@@ -8,7 +8,6 @@ import Portfolio from "@/components/Portfolio";
 import Philosophy from "@/components/Philosophy";
 import Pricing from "@/components/Pricing";
 import AdditionalServices from "@/components/AdditionalServices";
-import Testimonials from "@/components/Testimonials";
 import MegaCTA from "@/components/MegaCTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -27,7 +26,6 @@ export default function Home() {
       <Philosophy />
       <Pricing />
       <AdditionalServices />
-      <Testimonials />
       <MegaCTA />
       <Contact />
       <Footer />

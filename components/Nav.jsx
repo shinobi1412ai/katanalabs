@@ -23,7 +23,6 @@ export default function Nav() {
           <Link href="/">Startseite</Link>
           <Link href="#services">Leistungen</Link>
           <Link href="#pricing">Preise</Link>
-          <Link href="#testimonials">Über Uns</Link>
           <Link href="#contact">Kontakt</Link>
         </div>
 
