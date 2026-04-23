@@ -60,7 +60,7 @@ const tiers = [
 const monthlyCosts = [
   { label: "KI-Automationsbetrieb", val: "150€", mtl: true },
   { label: "Chatbot Betrieb", val: "99€", mtl: true },
-  { label: "Hosting & Wartung", val: "25€", mtl: true },
+  { label: "Wartung", val: "25€", mtl: true },
   { label: "Hosting", val: "19€", mtl: true },
   { label: "Voice-Agent Laufzeit", val: "nach Volumen", custom: true },
   { label: "Bundle-Rabatt möglich", val: "✓", check: true },
