@@ -19,7 +19,8 @@ export default function Contact() {
 
   const submit = (e) => {
     e.preventDefault();
-    alert(`Danke ${form.vorname}! Wir melden uns innerhalb 24h.\n\nInteressen: ${[...selected].join(", ") || "—"}`);
+    const interests = [...selected].join(", ") || "—";
+    window.location.href = `mailto:katanalabs@gmail.com?subject=Anfrage von ${form.vorname} ${form.nachname}&body=Interessen: ${interests}%0AE-Mail: ${form.email}%0AFirma: ${form.firma}%0A%0A${form.msg}`;
   };
 
   return (

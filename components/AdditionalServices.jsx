@@ -14,13 +14,13 @@ const rows = [
     desc: "Zusätzliche leistungsstarke Tools zur automatischen Lead-Generierung und Qualifizierung.",
   },
   {
-    img: "/images/samuraigirl.png",
+    img: "/images/praesentation.png",
     alt: "",
     title: "Präsentationsentwicklung",
     desc: "Für deine Dienstleistungen, Produkte, Webinare und Präsentationen.",
   },
   {
-    img: "/images/hf_20260417_014619_59a7460c-cca8-40ee-b282-01d424310a25 (1).png",
+    img: "/images/ki-chatbot-voice.png",
     alt: "",
     title: "KI-Avatare & Voice Cloning",
     desc: "Benutzerdefinierte Voice-Modelle für Hotlines, Video-Narrative und mehrsprachige Kampagnen.",
